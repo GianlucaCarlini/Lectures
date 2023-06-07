@@ -39,8 +39,8 @@ class Convolution(Scene):
         convolved_image = convolved_image * 255
         convolved_image = convolved_image.ravel()
 
-        plane = NumberPlane()
-        self.add(plane)
+        # plane = NumberPlane()
+        # self.add(plane)
 
         # make the image a manim object
 
@@ -134,7 +134,7 @@ class Convolution(Scene):
             )
 
             pixel.set_fill(color=color, opacity=1)
-            pixel.move_to(kernel.get_center() + [5, 0, 0])
+            pixel.move_to(kernel.get_center() + [6, 0, 0])
 
             self.play(Create(pixel), run_time=0.015)
 
@@ -150,5 +150,5 @@ class Convolution(Scene):
         )
 
         pixel.set_fill(color=color, opacity=1)
-        pixel.move_to(kernel.get_center() + [5 + kernel.get_width() / 3, 0, 0])
+        pixel.move_to(kernel.get_center() + [6 + kernel.get_width() / 3, 0, 0])
         self.play(Create(pixel), run_time=0.015)
